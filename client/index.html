@@ -4,9 +4,6 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
     <script src="./js/medida.js"></script>
     <script src="./js/temperatura.js"></script>
-    <script src="./js/celsius.js"></script>
-    <script src="./js/kelvin.js"></script>
-    <script src="./js/fahr.js"></script>
     <script>
         function get_val(){
             let regexp = /([-+]?\d+(?:\.\d*)?)\s*([fFcCkK])/;
@@ -19,20 +16,20 @@
             else if (from[2] == 'C' || from[2] == 'c' ){
                 console.log("Es Celsius");
                 p = new Celsius(aux[0]);
-                console.log(p.get_val());
+                console.log(p.val());
             }
 
             else if (from[2] == 'F' || from[2] == 'f' ){
                 console.log("Es Fahrenheit");
                 p = new Fahrenheit(aux[0]);
-                console.log(p.get_val());
+                //console.log(p.val());
 
             }
 
             else if (from[2] == 'K' || from[2] == 'k' ){
                 console.log("Es Kelvin")
                 p = new Kelvin(aux[0]);
-                console.log(p.get_val());
+              //  console.log(p.val());
 
             }
 
@@ -66,7 +63,7 @@
 <table>
     <tr>
         <th>Enter Temperature (examples: 32F, 45C, -2.5f):</th>
-        <td><input id="original" autofocus onchange="get_val();" placeholder="32F" size="50"></td>
+        <td><input id="original" autofocus onchange="get_val();" placeholder="32F to K" size="50"></td>
     </tr>
 
     <tr>

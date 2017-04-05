@@ -19,20 +19,20 @@ class Medida {
 
     }
 
-    get_val(){
+    get cadena(){
         let val = this.val;
         return val.toString();
     }
 
-    set_val(x){
+    set cadena(x){
         this.val = x;
     }
-    get_unit(){
+    get unidad(){
         let unit = this.unit;
         return unit.toString();
     }
 
-    set_unit(x){
+    set unidad(x){
         this.unit = x;
     }
 }
