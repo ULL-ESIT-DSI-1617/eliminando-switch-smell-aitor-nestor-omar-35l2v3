@@ -3,7 +3,15 @@
 class Medida {
     constructor(x) {
 
-        var regexp = /([-+]?\d+(?:\.\d*)?)\s*([fFcCkK])/;
+        var regexp = XRegExp('^(\\s*) \n' +
+                '(?<valor> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) \n' +
+                '(\\s*)                                             \n' +
+                '(?<tipo> [fck])                                    \n' +
+                '(\\s*)                                             \n' +
+                '(to)?                                              \n' +
+                '(\\s*)                                             \n' +
+                '(?<to> [fck])                                      \n' +
+                '(\\s*)$','ix');
 
         aux = x.toString();
         // aux = aux.split(" "); // Guardamos en variable string para poder hacer el split
@@ -34,5 +42,10 @@ class Medida {
 
     set unidad(x){
         this.unit = x;
+    }
+    
+    convertir(valor) {
+      
+      //AQUI VA TODO EL CODIGO
     }
 }
