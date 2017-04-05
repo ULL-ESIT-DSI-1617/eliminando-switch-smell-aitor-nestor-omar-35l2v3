@@ -25,7 +25,8 @@
     "express": "^4.15.2",
     "express-session": "^1.15.1",
     "jsonfile": "^2.4.0",
-    "pbkdf2-password": "^1.2.1"
+    "pbkdf2-password": "^1.2.1",
+    "xregexp": "^3.1.1"
   },
   "engines": {
     "node": "7.1.0"
