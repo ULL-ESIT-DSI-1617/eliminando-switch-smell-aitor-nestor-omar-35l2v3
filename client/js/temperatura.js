@@ -2,8 +2,6 @@
 class Temperatura extends Medida{
     constructor(x){
         super(x);
-        this.measures = super.prueba; 
-      
     }
 
     get val(){
@@ -27,7 +25,6 @@ class Temperatura extends Medida{
 class Kelvin extends Temperatura{
     constructor(x){
         super(x)
-        this.measures.k = Kelvin;
     }
 
     toCelsius(){                          //Paso de Kelvin a Celsius
@@ -50,7 +47,6 @@ class Kelvin extends Temperatura{
 class Fahrenheit extends Temperatura{
     constructor(x){
         super(x)
-        this.measures.f = Fahrenheit;
     }
 
     toCelsius(){                          //Paso de Fahrenheit a Celsius
@@ -73,7 +69,6 @@ class Fahrenheit extends Temperatura{
 class Celsius extends Temperatura{
     constructor(x){
         super(x);
-        this.measures.c = Celsius;
     }
 
     toFahrenheit(){

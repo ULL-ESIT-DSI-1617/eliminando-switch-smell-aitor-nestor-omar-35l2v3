@@ -12,7 +12,7 @@ class Medida {
              '(\\s*)                                             \n' +
              '(to)?                                              \n' +
              '(\\s*)                                             \n' +
-             '(?<to> [fFcCkK])                                      \n' +
+             '(?<para> [a-zA-Z])                                      \n' +
              '(\\s*)$','ix');
              
              
@@ -29,12 +29,7 @@ class Medida {
 
 
     }
-    
-    get prueba(){
-      return this.measures; 
-    }
-    
-    
+  
 
     get cadena(){
         let val = this.val;
@@ -62,24 +57,23 @@ class Medida {
       {
         
         var numero = match.valor,
-            tipo   = match.tipo,
-            destino = match.to;
+        tipo   = match.tipo.toLowerCase()
+        var destino = match.para.toLowerCase()
             
-            
+          measures.f = Fahrenheit; 
+          measures.c = Celsius;
+          measures.k = Kelvin; 
           
-      
+        //  
           
-        //try {
+        
     
           var source = new measures[tipo](numero);
-          console.log(source);
           var target = "to"+measures[destino].name;
           return source[target]().toFixed(2) + " "+target;
   
           
           
-        //}
-        
         
         
       }
