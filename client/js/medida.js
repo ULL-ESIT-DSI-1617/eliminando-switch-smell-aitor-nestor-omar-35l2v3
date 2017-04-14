@@ -29,6 +29,12 @@ class Medida {
 
 
     }
+    
+    get prueba(){
+      return this.measures; 
+    }
+    
+    
 
     get cadena(){
         let val = this.val;
@@ -49,9 +55,8 @@ class Medida {
     
     convertir(valor) {
       
-      var measures = this.measures; 
-      
       var match = this.match(valor);
+      var measures = this.measures
       
       if (match) 
       {
@@ -62,21 +67,19 @@ class Medida {
             
             
           
-        try {
+      
           
-          var source = measures[tipo](numero);
+        //try {
+    
+          var source = new measures[tipo](numero);
           console.log(source);
           var target = "to"+measures[destino].name;
           return source[target]().toFixed(2) + " "+target;
   
           
           
-        }
-        catch(err) {
-          
-          return "Desconozco como convertir... "  
-          
-        }
+        //}
+        
         
         
       }
