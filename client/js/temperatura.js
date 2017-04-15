@@ -4,20 +4,8 @@ class Temperatura extends Medida{
         super(x);
     }
 
-    get val2(){
-        return super.valor
-    }
 
-    set val2(x){
-        super.valor = x;
-    }
-    get unit2(){
-        return super.unidad
-    }
-
-    set unit2(x){
-        super.unidad = x;
-    }
+    
 }
 
 class Kelvin extends Temperatura{
@@ -25,21 +13,16 @@ class Kelvin extends Temperatura{
         super(x)
     }
 
-    toCelsius(){                          //Paso de Kelvin a Celsius
-        let cel = super.val2;
-        let aux = cel - 273.15;
-        return aux;
-
+    toCelsius(){                          
+        return (super.getValor() - 273.15).toFixed(2);
     }
 
     toKelvin(){
-        return super.val2;
+        return super.getValor();
     }
 
-    toFahrenheit(){                       //Paso de Kelvin a Fahrenheit
-        let cel = super.val2;
-        let aux = cel * (9/5) - 459.67;
-        return aux;
+    toFahrenheit(){                       
+        return (super.getValor() * (9/5) - 459.67).toFixed(2);
     }
 }
 class Fahrenheit extends Temperatura{
@@ -47,20 +30,16 @@ class Fahrenheit extends Temperatura{
         super(x)
     }
 
-    toCelsius(){                          //Paso de Fahrenheit a Celsius
-        let cel = super.val2;
-        let aux = cel - 32 * (5/9);
-        return aux;
+    toCelsius(){                         
+        return (super.getValor() - 32 * (5/9)).toFixed(2);
     }
 
-    toKelvin(){                           //Paso de Fahrenheit a Kelvin
-        let cel = super.val2;
-        let aux = parseInt(cel) - 32 * (5/9) + 273;
-        return aux;
+    toKelvin(){
+        return ((super.getValor() + 459.67) * (5/9)).toFixed(2);
     }
 
     toFahrenheit(){
-        return super.val2;
+        return super.getValor();
     }
 }
 
@@ -70,19 +49,15 @@ class Celsius extends Temperatura{
     }
 
     toFahrenheit(){
-        let cel = super.val2;
-        let aux = cel * (9/5) + 32;
-        return aux;
+        return (super.getValor() * (9/5) + 32).toFixed(2);
     }
 
     toKelvin(){
-        let cel = super.val2;
-        let aux = parseInt(cel) + 273.15;
-        return aux;
+        return (super.getValor() + 273.15).toFixed(2);
     }
 
     toCelcius(){
-        return super.val2;
+        return super.getValor();
     }
 
 
