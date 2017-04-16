@@ -7,11 +7,11 @@ Enlace al [campus virtual](https://campusvirtual.ull.es/1617/course/view.php?id=
 # Versión HEROKU
 [Heroku](https://devcenter.heroku.com/categories/learning) es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación.
 
-Enlace en [Heroku](https://dsipractica6.herokuapp.com/login)
+Enlace en [Heroku](https://switchsmellv3.herokuapp.com/login)
 
 # Versión gh-pages
 
-Enlace en [gh-pages](https://ull-esit-dsi-1617.github.io/programacion-orientada-a-objetos-y-herencia-en-javascript-aitor-nestor-omar-35l2v3/)
+Enlace en [gh-pages](https://ull-esit-dsi-1617.github.io/eliminando-switch-smell-aitor-nestor-omar-35l2v3/)
 
 
 # Autores
