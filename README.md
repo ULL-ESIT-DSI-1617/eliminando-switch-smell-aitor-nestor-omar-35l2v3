@@ -1,4 +1,4 @@
-# Práctica: Programación orientada a objetos y Herencia en JavaScript
+# Práctica: Eliminando Switch Smell
 Enlace a la [descripción de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanoswitchsmell.html)
 
 # Desarrollo de Sistemas Informáticos
