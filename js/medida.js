@@ -32,23 +32,26 @@ class Medida {
         measures.f = Fahrenheit; 
         measures.c = Celsius;
         measures.k = Kelvin; 
+        measures.e = Euros;
+        measures.l = Libras;
+        measures.d = Dolares; 
         
         try { 
     
           var source = new measures[tipo](numero);
           var target = "to"+measures[destino].name;
-          return source[target]();
+          return source[target]() + " " +measures[destino].name
     
         }
         
         catch(err) {
-          return "Desconozco como convertir"
+          return 'Desconozco como convertir desde "'+tipo+'" hasta "'+destino+'"';
         }
               
       }
       else {
         
-        return "Error,introduzca una temperatura valida "
+        return "Error,introduzca una conversión valida "
         
       }
     }

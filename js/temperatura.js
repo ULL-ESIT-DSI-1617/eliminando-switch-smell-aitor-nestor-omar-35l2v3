@@ -3,9 +3,6 @@ class Temperatura extends Medida{
     constructor(x){
         super(x);
     }
-
-
-    
 }
 
 class Kelvin extends Temperatura{
